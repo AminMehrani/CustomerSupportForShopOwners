@@ -4,15 +4,8 @@ export interface Product {
   price: string;
   category: string;
   description: string;
-  stock_status: string;
-  [key: string]: string; // Allow flexible CSV columns
-}
-
-export interface KnowledgeDocument {
-  id: string;
-  name: string;
-  content: string;
-  type: 'text' | 'markdown';
+  stockStatus: string;
+  imageUrl?: string;
 }
 
 export interface ChatMessage {
@@ -20,11 +13,17 @@ export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
   timestamp: Date;
+  isStreaming?: boolean;
 }
 
-export interface AppState {
+export interface StoreContext {
   products: Product[];
-  documents: KnowledgeDocument[];
+  policies: string;
   storeName: string;
-  systemInstruction: string;
+}
+
+export enum AppMode {
+  ADMIN = 'ADMIN',
+  CUSTOMER = 'CUSTOMER',
+  EMBED = 'EMBED'
 }

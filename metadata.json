@@ -1,5 +1,5 @@
 {
-  "name": "WooGenie - Shop Assistant",
-  "description": "A smart chatbot plugin for WooCommerce that ingests product CSVs and documentation to answer customer queries using Gemini 3.",
+  "name": "WooGemini Chat",
+  "description": "A smart AI chatbot plugin for WooCommerce stores that answers customer questions using your product catalog and store policies.",
   "requestFramePermissions": []
 }
